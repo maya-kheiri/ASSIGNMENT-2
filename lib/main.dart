@@ -20,11 +20,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-    debugShowCheckedModeBanner: false,
-    title: title,
-    theme: ThemeData(primarySwatch: Colors.blue),
-    home: const MainPage(),
-  );
+        debugShowCheckedModeBanner: false,
+        title: title,
+        theme: ThemeData(primarySwatch: Colors.blue),
+        home: const MainPage(),
+      );
 }
 
 class MainPage extends StatefulWidget {
@@ -37,16 +37,16 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-    drawer: const NavigationDrawerWidget(),
-    appBar: AppBar(
-      backgroundColor: const Color(0xFF880E4F),
-      title: const Text(MyApp.title),
-    ),
-    body: Builder(
-      builder: (context) => Container(
-        alignment: Alignment.center,
-        padding: const EdgeInsets.symmetric(horizontal: 32),
-      ),
-    ),
-  );
+        drawer: const NavigationDrawerWidget(),
+        appBar: AppBar(
+          backgroundColor: const Color(0xFF880E4F),
+          title: const Text(MyApp.title),
+        ),
+        body: Builder(
+          builder: (context) => Container(
+            alignment: Alignment.center,
+            padding: const EdgeInsets.symmetric(horizontal: 32),
+          ),
+        ),
+      );
 }

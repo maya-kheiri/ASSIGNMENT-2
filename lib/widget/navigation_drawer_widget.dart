@@ -1,5 +1,5 @@
 import 'package:assignment_2/page/favourites_page.dart';
-import 'package:assignment_2/page/people_page.dart';
+import 'package:assignment_2/page/your_profile.dart';
 import 'package:assignment_2/page/user_page.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +12,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     const name = 'Maya Kheiri';
     const email = 'm.kh.kronz@gmail.com';
     const urlImage =
-        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80';
+        'https://images.pexels.com/photos/789305/pexels-photo-789305.jpeg?cs=srgb&dl=pexels-anastasiya-lobanovskaya-789305.jpg&fm=jpg';
 
     return Drawer(
       child: Material(
@@ -111,7 +111,7 @@ class NavigationDrawerWidget extends StatelessWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              const Spacer(),
               const CircleAvatar(
                 radius: 24,
                 backgroundColor: Colors.white12,
@@ -127,7 +127,7 @@ class NavigationDrawerWidget extends StatelessWidget {
     const color = Colors.white;
 
     return TextField(
-      style: TextStyle(color: color),
+      style: const TextStyle(color: color),
       decoration: InputDecoration(
         contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         hintText: 'Search',
@@ -169,12 +169,12 @@ class NavigationDrawerWidget extends StatelessWidget {
     switch (index) {
       case 0:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => const PeoplePage(),
+          builder: (context) => const YourProfile(),
         ));
         break;
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
-          builder: (context) => FavouritesPage(),
+          builder: (context) => const FavouritesPage(),
         ));
         break;
     }
