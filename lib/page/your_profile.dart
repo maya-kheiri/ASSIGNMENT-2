@@ -23,6 +23,7 @@ class YourProfile extends StatelessWidget {
         ),
         floatingActionButton: FloatingActionButton(
           child: const Icon(Icons.rotate_left),
+          backgroundColor: Colors.indigo,
           onPressed: () {
             final isPortrait =
                 MediaQuery.of(context).orientation == Orientation.portrait;
