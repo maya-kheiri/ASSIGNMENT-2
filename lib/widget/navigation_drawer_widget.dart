@@ -1,4 +1,5 @@
 import 'package:assignment_2/page/favourites_page.dart';
+import 'package:assignment_2/page/payment_page.dart';
 import 'package:assignment_2/page/your_profile.dart';
 import 'package:assignment_2/page/user_page.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ class NavigationDrawerWidget extends StatelessWidget {
   final padding = const EdgeInsets.symmetric(horizontal: 20);
 
   const NavigationDrawerWidget({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     const name = 'Maya Kheiri';
@@ -16,7 +18,7 @@ class NavigationDrawerWidget extends StatelessWidget {
 
     return Drawer(
       child: Material(
-        color:  const Color(0xFFD84B71),
+        color: const Color(0xFFD84B71),
         child: ListView(
           children: <Widget>[
             buildHeader(
@@ -115,7 +117,6 @@ class NavigationDrawerWidget extends StatelessWidget {
               const CircleAvatar(
                 radius: 24,
                 backgroundColor: Colors.white12,
-
                 child: Icon(Icons.add, color: Colors.white),
               )
             ],
@@ -129,7 +130,8 @@ class NavigationDrawerWidget extends StatelessWidget {
     return TextField(
       style: const TextStyle(color: color),
       decoration: InputDecoration(
-        contentPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+        contentPadding:
+            const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
         hintText: 'Search',
         hintStyle: const TextStyle(color: color),
         prefixIcon: const Icon(Icons.search, color: color),
@@ -175,6 +177,11 @@ class NavigationDrawerWidget extends StatelessWidget {
       case 1:
         Navigator.of(context).push(MaterialPageRoute(
           builder: (context) => const FavouritesPage(),
+        ));
+        break;
+      case 2:
+        Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => const PaymentPage(),
         ));
         break;
     }
