@@ -1,3 +1,4 @@
+import 'package:assignment_2/widget/navigation_drawer_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -50,8 +51,8 @@ class FavouritesPage extends StatelessWidget {
       SystemChrome.setPreferredOrientations(DeviceOrientation.values);
 
   Widget buildPortrait() => ListView(
-    children: [
-      buildImage(),
+    children:  [
+      const NavigationDrawerWidget(),
       const SizedBox(height: 16),
       buildImage(),
     ],
@@ -59,9 +60,9 @@ class FavouritesPage extends StatelessWidget {
 
   Widget buildLandscape() => Row(
     children: [
-      buildImage(),
+      const NavigationDrawerWidget(),
       const SizedBox(width: 16),
-      Expanded(child: SingleChildScrollView(child: buildImage())),
+      buildImage(),
     ],
   );
 
